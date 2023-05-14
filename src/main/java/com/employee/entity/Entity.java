@@ -1,11 +1,13 @@
 package com.employee.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 import javax.persistence.Table;
 
-@javax.persistence.Entity
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@jakarta.persistence.Entity
 @Table(name="empdata")
 public class Entity {
 	@Id
@@ -17,6 +19,17 @@ public class Entity {
 	public int getEmpId() {
 		return empId;
 	}
+	
+	public Entity(int empId, String empName, String gender, String dob, String empRole, int salary) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.dob = dob;
+		this.empRole = empRole;
+		this.salary = salary;
+	}
+
 	public void setEmpId(int empId) {
 		this.empId = empId;
 	}
