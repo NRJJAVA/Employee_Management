@@ -19,11 +19,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
 	private EmployeeRepository empRepo;
     
-	
-    
-	
-	
-
 	@Override
 	public EmployeeDTO getEmployee(Integer id) throws EmployeeException {
 	    Optional<Employee> optional = empRepo.findById(id);
@@ -33,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	         employee2.setEmpId(employee.getEmpId());
 	         employee2.setDob(employee.getDob());
 	         employee2.setEmpName(employee.getEmpName());
-	         employee.setEmpRole(employee.getEmpRole());
+	         employee2.setEmpRole(employee.getEmpRole());
 	         employee2.setGender(employee.getGender());
 	         employee2.setSalary(employee.getSalary());
 		return employee2;
