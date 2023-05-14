@@ -19,6 +19,7 @@ public class Employee {
 	private String dob;
 	private String empRole;
 	private int salary;
+	
 	public int getEmpId() {
 		return empId;
 	}
@@ -34,6 +35,10 @@ public class Employee {
 	}
 
 	
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public void setEmpId(int empId) {
 		this.empId = empId;
@@ -70,8 +75,4 @@ public class Employee {
 	}
 
 	
-	
-	
-	
-
 }

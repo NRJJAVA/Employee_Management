@@ -7,13 +7,13 @@ public class EmployeeDTO {
 	private String gender;
 	private String dob;
 	private String empRole;
-	private String Salary;
+	private int Salary;
 	
 	
-	public String getSalary() {
+	public int getSalary() {
 		return Salary;
 	}
-	public void setSalary(String salary) {
+	public void setSalary(int salary) {
 		Salary = salary;
 	}
 	public int getEmpId() {
