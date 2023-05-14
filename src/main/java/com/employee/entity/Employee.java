@@ -3,13 +3,14 @@ package com.employee.entity;
 
 import javax.persistence.Table;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name="empdata")
-public class Entity {
+public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int empId;
@@ -20,7 +21,7 @@ public class Entity {
 		return empId;
 	}
 	
-	public Entity(int empId, String empName, String gender, String dob, String empRole, int salary) {
+	public Employee(int empId, String empName, String gender, String dob, String empRole, int salary) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -29,6 +30,8 @@ public class Entity {
 		this.empRole = empRole;
 		this.salary = salary;
 	}
+
+	
 
 	public void setEmpId(int empId) {
 		this.empId = empId;
