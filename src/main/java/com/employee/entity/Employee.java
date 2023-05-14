@@ -17,6 +17,8 @@ public class Employee {
 	private String empName;
 	private String gender;
 	private String dob;
+	private String empRole;
+	private int salary;
 	public int getEmpId() {
 		return empId;
 	}
@@ -66,8 +68,7 @@ public class Employee {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	private String empRole;
-	private int salary;
+
 	
 	
 	

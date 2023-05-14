@@ -7,8 +7,15 @@ public class EmployeeDTO {
 	private String gender;
 	private String dob;
 	private String empRole;
+	private String Salary;
 	
 	
+	public String getSalary() {
+		return Salary;
+	}
+	public void setSalary(String salary) {
+		Salary = salary;
+	}
 	public int getEmpId() {
 		return empId;
 	}
