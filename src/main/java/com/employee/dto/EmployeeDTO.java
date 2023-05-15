@@ -2,6 +2,7 @@ package com.employee.dto;
 
 
 public class EmployeeDTO {
+	
 	private int empId;
 	private String empName;
 	private String gender;
