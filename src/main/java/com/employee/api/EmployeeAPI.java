@@ -41,11 +41,11 @@ public class EmployeeAPI {
 		return new ResponseEntity<>(employee,HttpStatus.OK);
 	}
 	@DeleteMapping(value="/employee/{empid}")
-	public ResponseEntity<String> deleteEmployee(@PathVariable Integer empId) throws EmployeeException{
-		empService.removeEmployee(empId);
-		String message= environment.getProperty("API.DELETE_SUCCESS");
+	public ResponseEntity<String> deleteEmployee(@PathVariable("empid") Integer empid) throws EmployeeException{
+	    empService.removeEmployee(empid);
+		String message= environment.getProperty("API.DELETE_SUCCESS") +empid;
 		return new ResponseEntity<>(message, HttpStatus.OK);
-		
+		 
 	}
 
 }

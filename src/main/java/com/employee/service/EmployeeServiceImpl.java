@@ -26,11 +26,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	         Employee employee = optional.orElseThrow(()-> new EmployeeException("Service.EMPLOYEE_NOT_FOUND"));
 	         EmployeeDTO employee2= new EmployeeDTO();
 	         employee2.setEmpId(employee.getEmpId());
-	         employee2.setDob(employee.getDob());
+	         employee2.setDob(employee.getDob()); 
 	         employee2.setEmpName(employee.getEmpName());
 	         employee2.setEmpRole(employee.getEmpRole());
 	         employee2.setGender(employee.getGender());
 	         employee2.setSalary(employee.getSalary());
+	         if(employee2==null) {
+	        	 
+	         }
 		return employee2;
 	}
 
@@ -51,8 +54,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public void removeEmployee(Integer empId) throws EmployeeException {
-		empRepo.deleteById(empId);
+	public void removeEmployee(Integer id) throws EmployeeException {
+		empRepo.deleteById(id);
 		
 	}
 

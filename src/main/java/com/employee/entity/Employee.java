@@ -13,18 +13,16 @@ import jakarta.persistence.Id;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int empId;
+	private Integer empId;
 	private String empName;
 	private String gender;
 	private String dob;
 	private String empRole;
-	private int salary;
+	private Integer salary;
 	
-	public int getEmpId() {
-		return empId;
-	}
 	
-	public Employee(int empId, String empName, String gender, String dob, String empRole, int salary) {
+	
+	public Employee(Integer empId, String empName, String gender, String dob, String empRole, Integer salary) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
@@ -40,8 +38,11 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void setEmpId(int empId) {
+	public void setEmpId(Integer empId) {
 		this.empId = empId;
+	}
+	public Integer getEmpId() {
+		return empId;
 	}
 	public String getEmpName() {
 		return empName;
@@ -67,7 +68,7 @@ public class Employee {
 	public void setEmpRole(String empRole) {
 		this.empRole = empRole;
 	}
-	public int getSalary() {
+	public Integer getSalary() {
 		return salary;
 	}
 	public void setSalary(int salary) {

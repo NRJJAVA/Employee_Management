@@ -6,6 +6,7 @@ public class EmployeeException extends Exception {
 		super(message);
 		
 	}
-	
 }
+	
+
 
